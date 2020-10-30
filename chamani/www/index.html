@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/index.js"></script>
+    <title>multijib</title>
+    <link rel="stylesheet" href="themes/multijib.min.css"/>
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css"/>
+    <link rel="stylesheet" href="themes/w3.css"/>
+    <link rel="stylesheet" href="jquery.mobile.structure-1.4.5.min.css"/>
+
+
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet" href="themes/swiper.min.css">
+    <script src="themes/swiper.min.js"></script>
+    <link rel="stylesheet" href="themes/bootstrap-combined.no-icons.min.css">
+    <link rel="stylesheet" href="themes/font-awesome.css">
+    <script src="themes/action.js"></script>
+
+
+    <style>
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+    </style>
+    <script src="palib/ajax.js"></script>
+    <script src="palib/form.js"></script>
+
+</head>
+<body style="direction:rtl; ">
+
+
+<div data-role="page" data-theme="a" id="aut1" class="">
+    <div data-role="content" data-theme="a">
+        <div style="width:100%; margin-top: 200px;" id="autres"></div>
+    </div>
+</div>
+
+<div data-role="page" data-theme="a" id="aut2" class="">
+    <div data-role="content" data-theme="a">
+        <div style="width:100%; margin-top: 200px;" id="autres2"></div>
+    </div>
+</div>
+<script src="palib/aut.js"></script>
+<div data-role="page" data-theme="a" id="home" class="">
+    <div data-role="header" data-position="fixed" style="background-color:#FFA500;" class="headers">
+        <span onclick="gotohome();" style="font-size:20px;"
+              class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
+              title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
+        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
+              class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
+              data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
+    </div>
+    <div data-role="content" data-theme="a">
+
+
+        <div style="width:100%; direction:ltr;">
+
+
+            <div class="swiper-container" style="height: 100vh;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+
+                        <table style="height:100%;width:100%;text-align:center ; background-color:#c6c6c6;">
+                            <tr>
+                                <td><span onclick="loadsndmsg()"><img src="pm.png" style="width:90%;"></span></td>
+                                <script src="palib/charj.js"></script>
+                                <td><span onclick="loadchrj()"><img src="ch.png" style="width:90%;"></span></td>
+                                <script src="palib/fishbime.js"></script>
+                                <td><img src="fi.png" style="width:90%;" onclick="showfishform()"></td>
+                            </tr>
+                            <script src="palib/requests.js"></script>
+                            <tr>
+                                <script src="palib/sabeghe_bime.js"></script>
+                                <td><span onclick="load_sabeghe_bime_form()"><img src="sa.png"
+                                                                                  style="width:90%;"></span></td>
+                                <td><span onclick="loadreq(0)"><img src="lis.png" style="width:90%;"></span></td>
+                                <td><span onclick="loadreq(1)"><img src="mal.png" style="width:90%;"></span></td>
+                            </tr>
+                            <script src="palib/news.js"></script>
+                            <tr>
+                                <td><img src="abu.png" style="width:90%;" onclick="location.replace('#aboutpg')"></td>
+                                <td><img src="pbim.png" style="width:90%;"></td>
+                                <script src="palib/dastmozd.js"></script>
+                                <td><span onclick="loaddastmozd()"><img src="tab.png" style="width:90%;"></span></td>
+                                <div style="display: none;" id="dastmozdplc"></div>
+                            </tr>
+                            <tr>
+                                <td><img src="tec.png" onclick="loadnewslist(3)" style="width:90%;"></td>
+                                <td><img src="tabl.png" onclick="loadnewslist(2)" style="width:90%;"></td>
+                                <script src="palib/moshavere.js"></script>
+                                <td><span onclick="load_moshavere_form()"><img src="mosh.png" style="width:90%;"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://sadad.shaparak.ir/billpayment" target="_blank">
+                                        <img src="gabz.png" style="width:90%;">
+                                    </a>
+                                </td>
+                                <td><img src="newtec.png" onclick="loadnewslist(4)" style="width:90%;"></td>
+                                <script src="palib/vam.js"></script>
+                                <td>
+                                    <span class="w3-btn w3-green" onclick="load_vam_form()">خرید و فروش وام</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <script src="palib/niro.js"></script>
+                                <td>
+                                    <span class="w3-btn w3-green" onclick="load_niro_form()">تامین نیروی کار</span>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                        </table>
+
+
+                    </div>
+
+                </div>
+                <!-- Add Pagination -->
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<div data-role="page" data-theme="a" id="niro_pg" class="">
+    <div data-role="header" data-position="fixed" style="background-color:#FFA500;" class="headers">
+        <span onclick="gotohome();" style="font-size:20px;"
+              class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
+              title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
+        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
+              class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
+              data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
+    </div>
+    <div data-role="content" data-theme="a">
+        <p style="direction: rtl;">دوست عزیز دقیقا نیرو کار داری چه ویژگی باشد؟ شرایط را بطور کامل بنویسید</p>
+        <div style="width:100%;" id="niro_res"></div>
+        <div style="width:100%;" id="my_niro_res"></div>
+    </div>
+</div>
+
+<div data-role="page" data-theme="a" id="vam_pg" class="">
+    <div data-role="header" data-position="fixed" style="background-color:#FFA500;" class="headers">
+        <span onclick="gotohome();" style="font-size:20px;"
+              class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
+              title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
+        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
+              class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
+              data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
+    </div>
+    <div data-role="content" data-theme="a">
+        <div style="width:100%;" id="vam_res"></div>
+        <div style="width:100%;" id="my_vam_res"></div>
+    </div>
+</div>
+
+<div data-role="page" data-theme="a" id="moshavere_pg" class="">
+    <div data-role="header" data-position="fixed" style="background-color:#FFA500;" class="headers">
+        <span onclick="gotohome();" style="font-size:20px;"
+              class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
+              title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
+        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
+              class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
+              data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
+    </div>
+    <div data-role="content" data-theme="a">
+        <div style="width:100%;" id="moshavere_res"></div>
+        <div style="width:100%;" id="my_moshavere_res"></div>
+    </div>
+</div>
+
+<div data-role="page" data-theme="a" id="sabeghe_bime_pg" class="">
+    <div data-role="header" data-position="fixed" style="background-color:#FFA500;" class="headers">
+        <span onclick="gotohome();" style="font-size:20px;"
+              class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
+              title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
+        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
+              class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
+              data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
+    </div>
+    <div data-role="content" data-theme="a">
+        <div style="width:100%;" id="sabeghe_bime_res"></div>
+        <div style="width:100%;" id="my_sabeghe_bime_res"></div>
+    </div>
+</div>
+
+<div data-role="page" data-theme="a" id="reqpg" class="">
+    <div data-role="header" data-position="fixed" style="background-color:#FFA500;" class="headers">
+        <span onclick="gotohome();" style="font-size:20px;"
+              class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
+              title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
+        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
+              class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
+              data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
+    </div>
+    <div data-role="content" data-theme="a">
+        <div style="width:100%;" id="reqinp"></div>
+        <div style="width:100%;" id="sndreqplc"></div>
+        <h4>درخواست های قبلی</h4>
+        <div style="width:100%;" id="resreq"></div>
+    </div>
+</div>
+
+<div data-role="page" data-theme="a" id="aboutpg" class="">
+    <div data-role="header" data-position="fixed" style="background-color:#FFA500;" class="headers">
+        <span onclick="gotohome();" style="font-size:20px;"
+              class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
+              title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
+        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
+              class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
+              data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
+    </div>
+    <div data-role="content" data-theme="a">
+        <div style="width:100%;">
+            <h3>درباره ما</h3>
+            <p>مرکز تخصصی خدمات بیمه تامین اجتماعی - مالیات - روابط کار و ادارات دیگر با بیش از 15 سال سابقه
+                <br>
+                تخصص در بخشنامه ها، دستور العمل ها و دفاع از جرائم سازمان های مذکور
+                <br>
+                بیرجند - پاسداران - روبروی شعبه تامین اجتماعی - داخل باهنر غربی - پلاک 17
+                <br>
+                تلفن : 3242 3242
+                همراه: 09155614320
+                صبح و عصر
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<div data-role="page" data-theme="a" id="fishbimepg" class="">
+    <div data-role="header" data-position="fixed" style="background-color:#FFA500;" class="headers">
+        <span onclick="gotohome();" style="font-size:20px;"
+              class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
+              title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
+        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
+              class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
+              data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
+    </div>
+    <div data-role="content" data-theme="a">
+        <div style="width:100%;" id="fishbimeplc"></div>
+        <div style="width:100%; text-align: center;" id="myfishbime"></div>
+    </div>
+</div>
+<div data-role="page" data-theme="a" id="singlenewpg" class="">
+    <div data-role="header" data-position="fixed" style="background-color:#FFA500;" class="headers">
+        <span onclick="gotohome();" style="font-size:20px;"
+              class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
+              title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
+        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
+              class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
+              data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
+    </div>
+    <div data-role="content" data-theme="a">
+        <div style="width:100%;" id="singlenewplc"></div>
+    </div>
+</div>
+<div data-role="page" data-theme="a" id="newslistpg" class="">
+    <div data-role="header" data-position="fixed" style="background-color:#FFA500;" class="headers">
+        <span onclick="gotohome();" style="font-size:20px;"
+              class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
+              title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
+        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
+              class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
+              data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
+    </div>
+    <div data-role="content" data-theme="a">
+        <div style="width:100%;" id="newslistplc"></div>
+    </div>
+</div>
+
+<div data-role="page" data-theme="a" id="chrjpg" class="">
+    <div data-role="header" data-position="fixed" style="background-color:#FFA500;" class="headers">
+        <span onclick="gotohome();" style="font-size:20px;"
+              class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
+              title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
+        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
+              class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
+              data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
+    </div>
+    <div data-role="content" data-theme="a">
+        <div style="width:100%;" id="charjplc"></div>
+        <div style="width:100%;" id="mycharjplc"></div>
+    </div>
+</div>
+
+<div data-role="page" data-theme="a" id="sndmsgpg" class="">
+    <div data-role="header" data-position="fixed" style="background-color:#FFA500;" class="headers">
+        <span onclick="gotohome();" style="font-size:20px;"
+              class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
+              title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
+        <h3 style="font-size:12px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
+              class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
+              data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
+    </div>
+    <div data-role="content" data-theme="a">
+        <script src="palib/sndmsg.js"></script>
+        <div style="width:100%;" id="sndmsgplc"></div>
+        <div style="width:100%;" id="mymsgplc"></div>
+    </div>
+</div>
+
+
+<div data-role="page" data-theme="a" id="singlenews" class="">
+    <div data-role="header" data-position="fixed" class="headers">
+        <span onclick="gotohome();" style="font-size:20px;"
+              class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
+              title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
+        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
+              class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
+              data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
+    </div>
+    <div data-role="content" data-theme="a">
+        <div style="width:100%;" id="newcontent">
+
+
+        </div>
+    </div>
+</div>
+
+
+<div data-role="page" data-theme="a" id="menuplc">
+    <div data-role="header" data-position="fixed" style="background-color:#FFA500;" class="headers">
+        <span onclick="gotohome();" style="font-size:20px;"
+              class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
+              title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
+        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <div style="width:100%; text-align:center;">
+            <img src="flogo.png" style="width:30%;">
+        </div>
+        <br>
+    </div>
+    <div data-role="content" data-theme="a">
+
+        <div style="width:100%; padding:10px; font-size:14px; font-family:'b nazanin'; font-weight:bold; color:#686868;"
+             id="dasteha">
+            <span onclick="location.replace('#gozareshat');"><i class="fas fa-globe"></i>&nbsp;&nbsp;&nbsp;&nbsp;خبرنامه</span>
+            <hr>
+            <span><i class="fas fa-info-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;دانستنی ها</span>
+            <hr>
+            <span><i class="fas fa-play-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;کلیپ ها</span>
+            <hr>
+            <span><i class="fas fa-chart-pie"></i>&nbsp;&nbsp;&nbsp;&nbsp;نظرسنجی</span>
+            <hr>
+            <span><i class="fas fa-question-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;مارا بشناسید</span>
+            <hr>
+        </div>
+    </div>
+</div>
+
+
+<div id="id01" class="w3-modal" style="text-align:center;">
+    <div class="w3-modal-content" style="text-align:center;">
+        <div class="w3-container" style="text-align:center; margin-top:50%;">
+            <img src="themes/loading.gif" style="width:80%;">
+        </div>
+    </div>
+</div>
+<script>
+    if (localStorage.mob != undefined && localStorage.mob != "" && localStorage.token != undefined && localStorage.token != "") {
+        location.replace("#home");
+    }
+</script>
+</body>
+</html>
