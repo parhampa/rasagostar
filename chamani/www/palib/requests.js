@@ -1,4 +1,5 @@
 function loadreq(req_type) {
+    onLoad();
     placeid = "reqinp";
     document.getElementById(placeid).innerHTML = "";
 
@@ -25,7 +26,7 @@ function loadreq(req_type) {
 
     var reqtxt = "";
     if (req_type == 0) {
-        reqtxt = "متن درخواست لیست بیمه";
+        reqtxt = "دوست عزیز تغییرات را دقیقا اعلام فرمائید ";
     }
     else if (req_type == 1) {
         reqtxt = "متن درخواستی برای مالیات";
@@ -93,6 +94,8 @@ function list_req() {
             htmres += "مبلغ درخواست: " + "<span class='w3-text-blue'>" + res.list[i].req_price + "</span>";
             htmres += "<br>";
             htmres += res.list[i].txt;
+            htmres += "<br>";
+            htmres += "فایل گزارش: " + "<a class='w3-btn w3-green w3-round w3-margin' href='" + res.list[i].file + "' target='_blank'>دانلود</a>";
             htmres += "<hr>";
         }
         document.getElementById("resreq").innerHTML = htmres;

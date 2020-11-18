@@ -1,4 +1,5 @@
 function loadregister() {
+	onLoad();
     placeid = "regform_plc";
     document.getElementById(placeid).innerHTML = "";
 

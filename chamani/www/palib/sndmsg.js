@@ -1,4 +1,5 @@
 function loadsndmsg() {
+	onLoad();
     placeid = "sndmsgplc";
 	document.getElementById(placeid).innerHTML="";
     input.name = "mob";

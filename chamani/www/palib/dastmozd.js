@@ -1,4 +1,5 @@
 function loaddastmozd() {
+	onLoad();
     placeid = "dastmozdplc";
     document.getElementById(placeid).innerHTML = "";
 

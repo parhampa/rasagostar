@@ -1,4 +1,5 @@
 function load_moshavere_form() {
+	onLoad();
     placeid = "moshavere_res";
     document.getElementById(placeid).innerHTML = "";
 

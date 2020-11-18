@@ -1,4 +1,5 @@
 function load_sabeghe_bime_form() {
+    onLoad();
     placeid = "sabeghe_bime_res";
     document.getElementById(placeid).innerHTML = "";
 
@@ -83,7 +84,7 @@ function load_sabeghe_bime_form() {
     }
     makeselect();
 
-    label.title = "شماره تماسی که به نام خودتان باشد";
+    label.title = "شماره همراهی که امتیاز آن بنام شماست";
     label.classes = "w3-text-green";
     make_label();
     input.name = "mob2";
@@ -97,7 +98,9 @@ function load_sabeghe_bime_form() {
     spanbtn.classes = "w3-btn w3-green w3-round w3-margin";
     make_span_btn();
 
-    my_sabeghe_bime();
+    //my_sabeghe_bime();
+
+    location.replace("#sabeghe_bime_pg");
 }
 
 function post_sabeghe_bime() {
@@ -105,7 +108,7 @@ function post_sabeghe_bime() {
     postobj.post_url = "http://mob.0004320.ir/client/sabeghe_bime.php";
     postobj.after_success = function (data) {
         var res = JSON.parse(data);
-        my_sabeghe_bime();
+        //my_sabeghe_bime();
         alert(res.msg);
     }
     res_obj_postdata("sbfrm");
@@ -139,11 +142,15 @@ function my_sabeghe_bime() {
             htmres += "شماره شناسنامه: " + res.usersabeghe[i].sh_sh + "<br>";
             htmres += "کد ملی: " + res.usersabeghe[i].sh_meli + "<br>";
             htmres += "تاریخ تولد: " + res.usersabeghe[i].tavalod + "<br>";
-            htmres += "شماره تلفن همراه: " + res.usersabeghe[i].mob + "<br>";
-            htmres += "وضعیت: " + res.usersabeghe[i].vaz + "<hr>";
+            htmres += "شماره تلفن همراهی که امتیاز آن بنام شما است : " + res.usersabeghe[i].mob + "<br>";
+            htmres += "وضعیت: " + res.usersabeghe[i].vaz + "<br>";
+            if (res.usersabeghe[i].file != "") {
+                htmres += "فایل گزارش: " + "<a href='" + res.usersabeghe[i].file + "' target='_blank' class='w3-btn w3-round w3-green w3-margin'>دانلود</a> " + "<hr>";
+            }
             document.getElementById(placeid).innerHTML = htmres;
+
         }
-        location.replace("#sabeghe_bime_pg");
+        location.replace("#mysabeghe_bime_pg");
     }
     res_obj_postdata("mysabi");
 }

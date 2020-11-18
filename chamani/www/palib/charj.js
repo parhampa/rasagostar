@@ -1,4 +1,5 @@
 function loadchrj() {
+    onLoad();
     placeid = "charjplc";
     document.getElementById(placeid).innerHTML = "";
 
@@ -47,9 +48,15 @@ function loadchrj() {
     spanbtn.onclick = "addcharj()";
     make_span_btn();
 
-    spanbtn.title = "پرداخت با USSD";
+    /*spanbtn.title = "پرداخت با USSD";
     spanbtn.classes = "w3-btn w3-blue w3-round w3-margin";
-    spanbtn.onclick = "window.open('tel:*6655*10004320#');";
+    spanbtn.onclick = "window.open('tel:*6655*10004320*1 %23');";
+    make_span_btn();
+    showmycharj()*/
+
+    spanbtn.title = "پرداخت اینترنتی";
+    spanbtn.classes = "w3-btn w3-blue w3-round w3-margin";
+    spanbtn.onclick = "window.open('https://733.ir/sg/sg/5b4f96');";
     make_span_btn();
     showmycharj()
 

@@ -1,4 +1,5 @@
 function load_niro_form() {
+    onLoad();
     placeid = "niro_res";
     document.getElementById(placeid).innerHTML = "";
 
@@ -16,7 +17,7 @@ function load_niro_form() {
     input.classes = "nrfrm";
     makeinput();
 
-    label.title = "عنوان درخواست شما";
+    label.title = "نوع کار";
     label.classes = "w3-text-green";
     make_label();
     input.name = "title";
@@ -25,11 +26,29 @@ function load_niro_form() {
     input.classes = "w3-input w3-border nrfrm";
     makeinput();
 
-    label.title = "شرح بیشتر";
+    label.title = "شرایط کار";
     label.classes = "w3-text-green";
     make_label();
     textarea.name = "txt";
     textarea.id = "txt";
+    textarea.type = "text";
+    textarea.classes = "w3-input w3-border nrfrm";
+    make_textarea();
+
+    label.title = "دستمزد";
+    label.classes = "w3-text-green";
+    make_label();
+    input.name = "dastmozd";
+    input.id = "dastmozd";
+    input.classes = "w3-input w3-border nrfrm";
+    input.type = "number";
+    makeinput();
+
+    label.title = "مزایا";
+    label.classes = "w3-text-green";
+    make_label();
+    textarea.name = "mazaya";
+    textarea.id = "mazaya";
     textarea.type = "text";
     textarea.classes = "w3-input w3-border nrfrm";
     make_textarea();
@@ -46,6 +65,11 @@ function load_niro_form() {
     spanbtn.title = "ارسال";
     spanbtn.classes = "w3-btn w3-green w3-round w3-margin";
     spanbtn.onclick = "snd_niro()";
+    make_span_btn();
+
+    spanbtn.title = "پرداخت اینترنتی";
+    spanbtn.classes = "w3-btn w3-blue w3-round w3-margin";
+    spanbtn.onclick = "window.open('https://733.ir/sg/sg/5b4f96');";
     make_span_btn();
 
     my_niro();
@@ -86,9 +110,11 @@ function my_niro() {
         var res = JSON.parse(data);
         var htmres = "";
         for (var i = 0; i < res.userniro.length; i++) {
-            htmres += "عنوان درخواست: " + res.userniro[i].title + "<br>";
-            htmres += "متن درخواست: " + res.userniro[i].txt + "<br>";
+            htmres += "نوع کار: " + res.userniro[i].title + "<br>";
+            htmres += "شرایط کار: " + res.userniro[i].txt + "<br>";
             htmres += "آدرس: " + res.userniro[i].address + "<br>";
+            htmres += "دستمزد: " + res.userniro[i].dastmozd + "<br>";
+            htmres += "مزایا: " + res.userniro[i].mazaya + "<br>";
             htmres += "وضعیت: " + res.userniro[i].vaz + "<hr>";
             document.getElementById(placeid).innerHTML = htmres;
         }

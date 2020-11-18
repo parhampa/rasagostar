@@ -1,4 +1,5 @@
 function load_vam_form() {
+	onLoad();
     placeid = "vam_res";
     document.getElementById(placeid).innerHTML = "";
 

@@ -7,6 +7,7 @@ var input = {
     values: "",
     onclick: "",
     onchange: "",
+    onkeypress: "",
     style: "",
     placeholder: ""
 };
@@ -31,7 +32,7 @@ function makeinput() {
         + input.style +
         '" placeholder="'
         + input.placeholder +
-        '">';
+        '" onkeypress="' + input.onkeypress + '">';
     document.getElementById(placeid).innerHTML = document.getElementById(placeid).innerHTML + strinput;
     input = {
         type: "",

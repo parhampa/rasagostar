@@ -1,4 +1,5 @@
 function loadnewslist(id) {
+	onLoad();
     placeid = "newslistplc";
     document.getElementById(placeid).innerHTML = "";
 

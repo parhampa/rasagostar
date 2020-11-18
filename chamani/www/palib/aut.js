@@ -1,6 +1,7 @@
 var tmpmob = "";
 
 function aut1() {
+	onLoad();
     placeid = "autres";
     document.getElementById(placeid).innerHTML = "";
 

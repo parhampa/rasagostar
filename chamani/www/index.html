@@ -20,19 +20,19 @@
     <script src="jquery-1.11.1.min.js"></script>
     <script src="jquery.mobile-1.4.5.min.js"></script>
 
-    <link rel="stylesheet" href="themes/swiper.min.css">
-    <script src="themes/swiper.min.js"></script>
+
     <link rel="stylesheet" href="themes/bootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="themes/font-awesome.css">
     <script src="themes/action.js"></script>
-
-
+    <script src="splide/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="splide/dist/css/splide.min.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('.splide').mount();
+        });
+    </script>
     <style>
 
-        .swiper-container {
-            width: 100%;
-            height: 100%;
-        }
 
         a:link {
             text-decoration: none;
@@ -43,7 +43,84 @@
     <script src="palib/form.js"></script>
 
 </head>
-<body style="direction:rtl; ">
+<script>
+    function onmyload() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    function onDeviceReady() {
+        console.log(FileTransfer);
+    }
+</script>
+<script type="text/javascript" charset="utf-8">
+    function onLoad() {
+        document.addEventListener("deviceready", ondvr, false);
+    }
+
+    function ondvr() {
+        document.addEventListener("backbutton", onbb, false);
+    }
+
+    function onbb() {
+        if ($.mobile.activePage.is('#home')) {
+            navigator.app.exitApp();
+        }
+        if ($.mobile.activePage.is('#aut1')) {
+            navigator.app.exitApp();
+        }
+        if ($.mobile.activePage.is('#aut2')) {
+            navigator.app.exitApp();
+        }
+
+
+        if ($.mobile.activePage.is('#niro_pg')) {
+            location.replace("#home");
+        }
+        if ($.mobile.activePage.is('#vam_pg')) {
+            location.replace("#home");
+        }
+        if ($.mobile.activePage.is('#moshavere_pg')) {
+            location.replace("#home");
+        }
+        if ($.mobile.activePage.is('#sabeghe_bime_pg')) {
+            location.replace("#home");
+        }
+        if ($.mobile.activePage.is('#mysabeghe_bime_pg')) {
+            location.replace("#home");
+        }
+        if ($.mobile.activePage.is('#reqpg')) {
+            location.replace("#home");
+        }
+        if ($.mobile.activePage.is('#aboutpg')) {
+            location.replace("#home");
+        }
+        if ($.mobile.activePage.is('#fishbimepg')) {
+            location.replace("#home");
+        }
+        if ($.mobile.activePage.is('#singlenewpg')) {
+            location.replace("#home");
+        }
+        if ($.mobile.activePage.is('#newslistpg')) {
+            location.replace("#home");
+        }
+        if ($.mobile.activePage.is('#chrjpg')) {
+            location.replace("#home");
+        }
+        if ($.mobile.activePage.is('#sndmsgpg')) {
+            location.replace("#home");
+        }
+        if ($.mobile.activePage.is('#singlenews')) {
+            location.replace("#home");
+        }
+        if ($.mobile.activePage.is('#menuplc')) {
+            location.replace("#home");
+        }
+
+    }
+
+    onLoad();
+</script>
+<body style="direction:rtl;" onload="onLoad()">
 
 
 <div data-role="page" data-theme="a" id="aut1" class="">
@@ -58,90 +135,131 @@
     </div>
 </div>
 <script src="palib/aut.js"></script>
-<div data-role="page" data-theme="a" id="home" class="">
+<div data-role="page" data-theme="a" id="home" style="background-color:#c6c6c6;">
     <div data-role="header" data-position="fixed" style="background-color:#FFA500;" class="headers">
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <h3>خدمات بیمه و مالیات چمنی</h3>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
     </div>
-    <div data-role="content" data-theme="a">
+    <div data-role="content" data-theme="a" style="background-color:#c6c6c6;">
 
 
-        <div style="width:100%; direction:ltr;">
+        <div style="width:100%; direction:ltr; background-color:#c6c6c6;" id="mnpg">
+            <div class="splide" style="background-color:#c6c6c6;">
+                <div class="splide__track" style="background-color:#c6c6c6;">
+                    <ul class="splide__list" style="background-color:#c6c6c6;">
+                        <li class="splide__slide" style="background-color:#c6c6c6;">
+                            <table style="width:100%; text-align:center ; direction: rtl;">
+                                <tr>
+
+                                    <script src="palib/fishbime.js"></script>
+                                    <td style="padding-top:55px;"><span onclick="loadreq(0)"><img src="lis.png"
+                                                                                                  style="width:90%;"></span>
+                                    </td>
+                                    <td style="padding-top:55px;"><img src="fi.png" style="width:90%;"
+                                                                       onclick="showfishform()"></td>
+                                    <td style="padding-top:55px;"><a href="https://sep.shaparak.ir/Purchase/tamin"
+                                                                     target="_blank"><img src="pbim.png"
+                                                                                          style="width:90%;"></a></td>
+                                </tr>
+                                <script src="palib/requests.js"></script>
+                                <tr>
+                                    <script src="palib/sabeghe_bime.js"></script>
+                                    <td style="padding-top:55px;"><span onclick="load_sabeghe_bime_form()"><img
+                                            src="sa.png"
+                                            style="width:90%;"></span></td>
+                                    <td style="padding-top:55px;"><span onclick="my_sabeghe_bime()"><img
+                                            src="moshahede_sabeghe_bime.png"
+                                            style="width:90%;"></span>
+                                    </td>
+
+                                    <script src="palib/charj.js"></script>
+                                    <td style="padding-top:55px;"><span onclick="loadchrj()"><img src="ch.png"
+                                                                                                  style="width:90%;"></span>
+                                    </td>
 
 
-            <div class="swiper-container" style="height: 100vh;">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                                </tr>
+                                <script src="palib/news.js"></script>
+                                <tr>
+                                    <td style="padding-top:55px;"><span onclick="loadreq(1)"><img src="mal.png"
+                                                                                                  style="width:90%;"></span>
+                                    </td>
+                                    <div style="display: none;" id="dastmozdplc"></div>
+                                    <script src="palib/dastmozd.js"></script>
+                                    <td style="padding-top:55px;"><span onclick="loaddastmozd()"><img src="tab.png"
+                                                                                                      style="width:90%;"></span>
+                                    </td>
+                                    <script src="palib/niro.js"></script>
+                                    <td style="padding-top:55px;">
+                                        <img src="work.png" onclick="load_niro_form()">
+                                    </td>
+                                </tr>
+                            </table>
+                            <br><br><br></li>
+                        <li class="splide__slide">
+                            <table style="width:100%;text-align:center ; " style="background-color:#c6c6c6;">
+                                <tr>
 
-                        <table style="height:100%;width:100%;text-align:center ; background-color:#c6c6c6;">
-                            <tr>
-                                <td><span onclick="loadsndmsg()"><img src="pm.png" style="width:90%;"></span></td>
-                                <script src="palib/charj.js"></script>
-                                <td><span onclick="loadchrj()"><img src="ch.png" style="width:90%;"></span></td>
-                                <script src="palib/fishbime.js"></script>
-                                <td><img src="fi.png" style="width:90%;" onclick="showfishform()"></td>
-                            </tr>
-                            <script src="palib/requests.js"></script>
-                            <tr>
-                                <script src="palib/sabeghe_bime.js"></script>
-                                <td><span onclick="load_sabeghe_bime_form()"><img src="sa.png"
-                                                                                  style="width:90%;"></span></td>
-                                <td><span onclick="loadreq(0)"><img src="lis.png" style="width:90%;"></span></td>
-                                <td><span onclick="loadreq(1)"><img src="mal.png" style="width:90%;"></span></td>
-                            </tr>
-                            <script src="palib/news.js"></script>
-                            <tr>
-                                <td><img src="abu.png" style="width:90%;" onclick="location.replace('#aboutpg')"></td>
-                                <td><img src="pbim.png" style="width:90%;"></td>
-                                <script src="palib/dastmozd.js"></script>
-                                <td><span onclick="loaddastmozd()"><img src="tab.png" style="width:90%;"></span></td>
-                                <div style="display: none;" id="dastmozdplc"></div>
-                            </tr>
-                            <tr>
-                                <td><img src="tec.png" onclick="loadnewslist(3)" style="width:90%;"></td>
-                                <td><img src="tabl.png" onclick="loadnewslist(2)" style="width:90%;"></td>
-                                <script src="palib/moshavere.js"></script>
-                                <td><span onclick="load_moshavere_form()"><img src="mosh.png" style="width:90%;"></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="https://sadad.shaparak.ir/billpayment" target="_blank">
-                                        <img src="gabz.png" style="width:90%;">
-                                    </a>
-                                </td>
-                                <td><img src="newtec.png" onclick="loadnewslist(4)" style="width:90%;"></td>
-                                <script src="palib/vam.js"></script>
-                                <td>
-                                    <span class="w3-btn w3-green" onclick="load_vam_form()">خرید و فروش وام</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <script src="palib/niro.js"></script>
-                                <td>
-                                    <span class="w3-btn w3-green" onclick="load_niro_form()">تامین نیروی کار</span>
-                                </td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                                    <td style="padding-top:55px;"><span onclick="loadsndmsg()"><img src="pm.png"
+                                                                                                    style="width:90%;"></span>
+                                    </td>
+                                    <script src="palib/moshavere.js"></script>
+                                    <td style="padding-top:55px;"><span onclick="load_moshavere_form()"><img
+                                            src="mosh.png" style="width:90%;"></span>
+                                    </td>
+                                    <script src="palib/vam.js"></script>
+                                    <td style="padding-top:55px;">
+                                        <span onclick="load_vam_form()"><img src="vam.png"></span>
+                                    </td>
 
-                        </table>
+                                </tr>
+                                <tr>
+                                    <td style="padding-top:55px;"><img src="tec.png" onclick="loadnewslist(3)"
+                                                                       style="width:90%;"></td>
+                                    <td style="padding-top:55px;"><img src="newtec.png" onclick="loadnewslist(4)"
+                                                                       style="width:90%;"></td>
+                                    <td style="padding-top:55px;"><img src="tabl.png" onclick="loadnewslist(2)"
+                                                                       style="width:90%;"></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-top:55px;"><img src="abu.png" style="width:90%;"
+                                                                       onclick="location.replace('#aboutpg')"></td>
 
+                                    <td style="padding-top:55px;">
+                                        <a href="https://sadad.shaparak.ir/billpayment" target="_blank">
+                                            <img src="gabz.png" style="width:90%;">
+                                        </a>
+                                    </td>
+                                    <td style="padding-top:55px;"></td>
+                                </tr>
 
-                    </div>
-
+                            </table>
+                            <br><br><br></li>
+                    </ul>
                 </div>
-                <!-- Add Pagination -->
-
             </div>
+            <script>
+                new Splide('.splide').mount();
+                document.getElementsByClassName('splide__arrows')[0].style.display = "none";
+
+                setTimeout(function () {
+                    document.getElementsByClassName('splide__pagination')[1].style.display = "none";
+                    document.getElementsByClassName('splide__pagination')[0].style.display = "none";
+                }, 100);
+            </script>
 
 
         </div>
+    </div>
+    <div data-role="footer" data-position="fixed" style="background-color:#c6c6c6; border-color:#c6c6c6;">
+        <br>
+        <br>
+        <br>
     </div>
 </div>
 
@@ -151,7 +269,7 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <h3>خدمات بیمه و مالیات چمنی</h3>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
@@ -168,7 +286,7 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <h3>خدمات بیمه و مالیات چمنی</h3>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
@@ -184,7 +302,7 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <h3>خدمات بیمه و مالیات چمنی</h3>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
@@ -195,19 +313,32 @@
     </div>
 </div>
 
+<div data-role="page" data-theme="a" id="mysabeghe_bime_pg" class="">
+    <div data-role="header" data-position="fixed" style="background-color:#FFA500;" class="headers">
+        <span onclick="gotohome();" style="font-size:20px;"
+              class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
+              title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
+        <h3>خدمات بیمه و مالیات چمنی</h3>
+        <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
+              class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
+              data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
+    </div>
+    <div data-role="content" data-theme="a">
+        <div style="width:100%;" id="my_sabeghe_bime_res"></div>
+    </div>
+</div>
 <div data-role="page" data-theme="a" id="sabeghe_bime_pg" class="">
     <div data-role="header" data-position="fixed" style="background-color:#FFA500;" class="headers">
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <h3>خدمات بیمه و مالیات چمنی</h3>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
     </div>
     <div data-role="content" data-theme="a">
         <div style="width:100%;" id="sabeghe_bime_res"></div>
-        <div style="width:100%;" id="my_sabeghe_bime_res"></div>
     </div>
 </div>
 
@@ -216,7 +347,7 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <h3>خدمات بیمه و مالیات چمنی</h3>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
@@ -224,7 +355,7 @@
     <div data-role="content" data-theme="a">
         <div style="width:100%;" id="reqinp"></div>
         <div style="width:100%;" id="sndreqplc"></div>
-        <h4>درخواست های قبلی</h4>
+        <p>درخواستهای شما در زیر لیست خواهند شد:</p>
         <div style="width:100%;" id="resreq"></div>
     </div>
 </div>
@@ -234,7 +365,7 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <h3>خدمات بیمه و مالیات چمنی</h3>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
@@ -262,7 +393,7 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <h3>خدمات بیمه و مالیات چمنی</h3>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
@@ -270,6 +401,8 @@
     <div data-role="content" data-theme="a">
         <div style="width:100%;" id="fishbimeplc"></div>
         <div style="width:100%; text-align: center;" id="myfishbime"></div>
+        <h3>درخواست های گذشته شما</h3>
+        <div style="width:100%; text-align: center;" id="myfishbime_req"></div>
     </div>
 </div>
 <div data-role="page" data-theme="a" id="singlenewpg" class="">
@@ -277,7 +410,7 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <h3>خدمات بیمه و مالیات چمنی</h3>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
@@ -291,7 +424,7 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <h3>خدمات بیمه و مالیات چمنی</h3>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
@@ -306,12 +439,13 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <h3>خدمات بیمه و مالیات چمنی</h3>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
     </div>
     <div data-role="content" data-theme="a">
+        <p class="w3-text-red">حق الزحمه خدمات دفتر 300،000 ریال می باشد</p>
         <div style="width:100%;" id="charjplc"></div>
         <div style="width:100%;" id="mycharjplc"></div>
     </div>
@@ -322,7 +456,7 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3 style="font-size:12px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <h3 style="font-size:12px;">خدمات بیمه و مالیات چمنی</h3>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
@@ -340,7 +474,7 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <h3>خدمات بیمه و مالیات چمنی</h3>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
@@ -359,7 +493,7 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3 style="font-size:10px;">مرکز تخصصی خدمات چمنی – رساگستر</h3>
+        <h3>خدمات بیمه و مالیات چمنی</h3>
         <div style="width:100%; text-align:center;">
             <img src="flogo.png" style="width:30%;">
         </div>
