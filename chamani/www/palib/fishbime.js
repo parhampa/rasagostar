@@ -98,13 +98,14 @@ function showresfishbime() {
         document.getElementById('myfishbime_req').innerHTML = "";
         var reshtm = "";
         for (var i = 0; i < res.req.length; i++) {
-            reshtm += "تاریخ درخواست: " + res.req[i].id + "<br>";
+            reshtm += "تاریخ درخواست: " + res.req[i].tarikh + "<br>";
             reshtm += "<img src='" + res.req[i].file + "' style='display: none;' id='reqfish" + res.req[i].id + "'>";
-            reshtm += "<span class='w3-btn w3-green w3-margin w3-round' onclick='showthisfish(" + res.req[i].id + ")'>نمایش فیش</span>";
-            reshtm += "<span class='w3-btn w3-yellow w3-margin w3-round' onclick='loadmormyfish(" + res.req[i].id + ")'>نمایش با جزئیات</span>";
+            reshtm += "<span class='w3-btn w3-green w3-round' onclick='showthisfish(" + res.req[i].id + ")'>نمایش فیش</span>";
+            reshtm += " <span class='w3-btn w3-yellow w3-round' onclick='loadmormyfish(" + res.req[i].id + ")'>نمایش با جزئیات</span>";
+            reshtm += " <span class='w3-btn w3-blue w3-round' onclick='deletemyfish(" + res.req[i].id + ")'>حذف تصویر</span>";
             reshtm += "<hr>";
         }
-        document.getElementById('myfishbime_req').innerHTML = reshtm;
+        document.getElementById('myfishbime_req').innerHTML = reshtm + "<div id='delfish'></div>";
     }
     res_obj_postdata("fishfrm");
 
@@ -154,4 +155,40 @@ function load_my_fish() {
         document.getElementById('mymeli').innerHTML = data;
     }
     res_obj_postdata("fishfrm");
+}
+
+function deletemyfish(id) {
+    document.getElementById('code_meli').value = "";
+    placeid = "delfish";
+    document.getElementById('delfish').innerHTML = "";
+
+    input.name = "mob";
+    input.id = "mob";
+    input.type = "hidden";
+    input.values = localStorage.getItem("mob");
+    input.classes = "delfishfrm";
+    makeinput();
+
+    input.name = "token";
+    input.id = "token";
+    input.type = "hidden";
+    input.values = localStorage.getItem("token");
+    input.classes = "delfishfrm";
+    makeinput();
+
+    input.name = "id";
+    input.id = "id";
+    input.type = "hidden";
+    input.values = id;
+    input.classes = "delfishfrm";
+    makeinput();
+
+    postobj.type = "post";
+    postobj.post_url = "http://mob.0004320.ir/client/del_fish.php";
+    postobj.after_success = function (data) {
+        var res = JSON.parse(data);
+        alert(res.msg);
+        showresfishbime();
+    }
+    res_obj_postdata("delfishfrm");
 }
