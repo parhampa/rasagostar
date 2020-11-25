@@ -36,6 +36,12 @@
             text-decoration: none;
         }
 
+        .mainitems {
+            border-style: solid !important;
+            border-radius: 50%;
+            border-width: 2px !important;
+            border-color: #FFA500 !important;
+        }
     </style>
     <script src="palib/ajax.js"></script>
     <script src="palib/form.js"></script>
@@ -133,7 +139,8 @@
     </div>
 </div>
 <script src="palib/aut.js"></script>
-<div data-role="page" data-theme="a" id="home" style="background-color:#c6c6c6;">
+<div data-role="page" data-theme="a" id="home"
+     style="background: rgb(226,226,226);background: radial-gradient(circle, rgba(226,226,226,1) 0%, rgba(85,86,88,1) 100%);">
     <div data-role="header" data-position="fixed" style="background-color:#FFA500;" class="headers">
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
@@ -143,32 +150,34 @@
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
     </div>
-    <div data-role="content" data-theme="a" style="background-color:#c6c6c6;">
+    <div data-role="content" data-theme="a" style="">
+        <br><br>
 
-
-        <div style="width:100%; direction:ltr; background-color:#c6c6c6;" id="mnpg">
-            <div class="splide" style="background-color:#c6c6c6;">
-                <div class="splide__track" style="background-color:#c6c6c6;">
-                    <ul class="splide__list" style="background-color:#c6c6c6;">
-                        <li class="splide__slide" style="background-color:#c6c6c6;">
-                            <table style="width:100%; text-align:center ; direction: rtl;">
+        <div style="width:100%; direction:ltr;" id="mnpg">
+            <div class="splide" style="">
+                <div class="splide__track" style="">
+                    <ul class="splide__list" style="">
+                        <li class="splide__slide" style="">
+                            <table style="width:99%; margin:2px; text-align:center ; direction: rtl;">
                                 <tr>
 
                                     <script src="palib/fishbime.js"></script>
                                     <td style="font-weight: bold; width: 33.33%;"><span
                                             onclick="loadreq(0)"><img
                                             src="lis.png"
-                                            style="width:90%;"><br>سفارش لیست بیمه</span>
+                                            style="width:90%;" class="mainitems"><br>سفارش لیست بیمه</span>
                                     </td>
                                     <td style="font-weight: bold; width: 33.33%;"><img src="fi.png"
                                                                                        style="width:90%;"
-                                                                                       onclick="showfishform()"><br>مشاهده
+                                                                                       onclick="showfishform()"
+                                                                                       class="mainitems"><br>مشاهده
                                         فیش بیمه
                                     </td>
                                     <td style="font-weight: bold; width: 33.33%;"><a
                                             href="https://sep.shaparak.ir/Purchase/tamin"
                                             target="_blank"><img src="pbim.png"
-                                                                 style="width:90%;"></a><br>پرداخت فیش بیمه
+                                                                 style="width:90%;" class="mainitems"></a><br>پرداخت فیش
+                                        بیمه
                                     </td>
                                 </tr>
                                 <script src="palib/requests.js"></script>
@@ -177,17 +186,17 @@
                                     <td style="font-weight: bold;"><span
                                             onclick="load_sabeghe_bime_form()"><img
                                             src="sa.png"
-                                            style="width:90%;"><br>درخواست سابقه بیمه</span></td>
+                                            style="width:90%;" class="mainitems"><br>درخواست سابقه بیمه</span></td>
                                     <td style="font-weight: bold;"><span
                                             onclick="my_sabeghe_bime()"><img
                                             src="moshahede_sabeghe_bime.png"
-                                            style="width:90%;"><br>مشاهده سابقه بیمه</span>
+                                            style="width:90%;" class="mainitems"><br>مشاهده سابقه بیمه</span>
                                     </td>
 
                                     <script src="palib/charj.js"></script>
                                     <td style="font-weight: bold;"><span onclick="loadchrj()"><img
                                             src="ch.png"
-                                            style="width:90%;"><br>پرداخت حق الزحمه دفتر</span>
+                                            style="width:90%;" class="mainitems"><br>پرداخت حق الزحمه دفتر</span>
                                     </td>
 
 
@@ -196,61 +205,64 @@
                                 <tr>
                                     <td style="font-weight: bold;"><span onclick="loadreq(1)"><img
                                             src="mal.png"
-                                            style="width:90%;">سفارش اظهارنامه مالیات</span>
+                                            style="width:90%;" class="mainitems">سفارش اظهارنامه مالیات</span>
                                     </td>
                                     <div style="display: none;" id="dastmozdplc"></div>
                                     <script src="palib/dastmozd.js"></script>
                                     <td style="font-weight: bold;"><span onclick="loaddastmozd()"><img src="tab.png"
-                                                                                                       style="width:90%;"><br>جدول دستمزد</span>
+                                                                                                       style="width:90%;"
+                                                                                                       class="mainitems"><br>جدول دستمزد</span>
                                     </td>
                                     <script src="palib/niro.js"></script>
                                     <td style="font-weight: bold;">
-                                        <img src="work.png" onclick="load_niro_form()">
+                                        <img src="work.png" onclick="load_niro_form()" class="mainitems">
                                         <br>تامین نیروی کار
                                     </td>
                                 </tr>
                             </table>
                             <br><br><br></li>
-                        <li class="splide__slide">
-                            <table style="width:100%;text-align:center ; direction: rtl;"
-                                   style="background-color:#c6c6c6;">
+                        <li class="splide__slide" style="">
+                            <table style="width:99%; margin:2px; text-align:center ; direction: rtl;">
                                 <tr>
                                     <script src="palib/moshavere.js"></script>
                                     <td style="font-weight: bold; width: 33.33%;"><span onclick="load_moshavere_form()"><img
-                                            src="mosh.png" style="width:90%;"><br>مشاوره بیمه و مالیات</span>
+                                            src="mosh.png" style="width:90%;" class="mainitems"><br>مشاوره بیمه و مالیات</span>
                                     </td>
                                     <script src="palib/vam.js"></script>
                                     <td style="font-weight: bold; width: 33.33%;">
-                                        <span onclick="load_vam_form()"><img src="vam.png"><br>خرید و فروش وام</span>
+                                        <span onclick="load_vam_form()"><img src="vam.png" class="mainitems"><br>خرید و فروش وام</span>
                                     </td>
                                     <td style="font-weight: bold; width: 33.33%;"><span onclick="loadsndmsg()"><img
                                             src="pm.png"
-                                            style="width:90%;">پیام ها</span>
+                                            style="width:90%;" class="mainitems">پیام ها</span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td style="font-weight: bold;"><img src="abu.png" style="width:90%;"
-                                                                        onclick="location.replace('#aboutpg')"><br>درباره
+                                                                        onclick="location.replace('#aboutpg')"
+                                                                        class="mainitems"><br>درباره
                                         ما
                                     </td>
                                     <td style="font-weight: bold;"><img src="tabl.png" onclick="loadnewslist(2)"
-                                                                        style="width:90%;"><br>تبلیغات
+                                                                        style="width:90%;" class="mainitems"><br>تبلیغات
                                     </td>
                                     <td style="font-weight: bold;"><img src="newtec.png" onclick="loadnewslist(4)"
-                                                                        style="width:90%;"><br>نوآوری
+                                                                        style="width:90%;" class="mainitems"><br>نوآوری
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td style="font-weight: bold;"></td>
                                     <td style="font-weight: bold;"><img src="tec.png" onclick="loadnewslist(3)"
-                                                                        style="width:90%;"><br>غیر ممکن، ممکن شد
+                                                                        style="width:90%;" class="mainitems"><br>غیر
+                                        ممکن، ممکن شد
                                     </td>
                                     <td style="font-weight: bold;">
                                         <a href="https://sadad.shaparak.ir/billpayment" target="_blank">
-                                            <img src="gabz.png" style="width:90%;">
+                                            <img src="gabz.png" style="width:90%;" class="mainitems">
                                         </a>
                                         <br>پرداخت قبوض آب، برق، گاز و...
                                     </td>
-                                    <td style="font-weight: bold;"></td>
+
                                 </tr>
 
                             </table>
@@ -271,7 +283,8 @@
 
         </div>
     </div>
-    <div data-role="footer" data-position="fixed" style="background-color:#c6c6c6; border-color:#c6c6c6;">
+    <div data-role="footer" data-position="fixed"
+         style="background: rgb(226,226,226);background: radial-gradient(circle, rgba(226,226,226,1) 0%, rgba(85,86,88,1) 0%);">
         <br>
         <br>
         <br>
