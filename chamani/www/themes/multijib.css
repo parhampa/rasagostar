@@ -224,8 +224,8 @@ html .ui-alt-icon .ui-radio-off:after {
 html .ui-bar-a .ui-bar-inherit,
 html .ui-body-a .ui-bar-inherit,
 html body .ui-group-theme-a .ui-bar-inherit {
-	background-color: #18903d /*{a-bar-background-color}*/;
-	border-color: #18903d /*{a-bar-border}*/;
+	background-color: rgb(226,226,226) /*{a-bar-background-color}*/;
+	border-color: rgb(226,226,226) /*{a-bar-border}*/;
 	color: #ffffff /*{a-bar-color}*/;
 	text-shadow: 0 /*{a-bar-shadow-x}*/ 0px /*{a-bar-shadow-y}*/ 0 /*{a-bar-shadow-radius}*/ #eeeeee /*{a-bar-shadow-color}*/;
 	font-weight: bold;
@@ -386,7 +386,7 @@ html head + body .ui-body-a.ui-focus {
 html .ui-bar-b .ui-bar-inherit,
 html .ui-body-b .ui-bar-inherit,
 html body .ui-group-theme-b .ui-bar-inherit {
-	background-color: #18903d /*{b-bar-background-color}*/;
+	background-color: rgb(226,226,226) /*{b-bar-background-color}*/;
 	border-color: #f42525 /*{b-bar-border}*/;
 	color: #ffffff /*{b-bar-color}*/;
 	text-shadow: 0 /*{b-bar-shadow-x}*/ 0px /*{b-bar-shadow-y}*/ 0 /*{b-bar-shadow-radius}*/ #eeeeee /*{b-bar-shadow-color}*/;
