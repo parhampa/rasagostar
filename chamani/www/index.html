@@ -58,10 +58,10 @@
 </script>
 <script type="text/javascript" charset="utf-8">
 
-    setInterval(function () {
+    /*setInterval(function () {
         document.getElementById('tbl1').style.width = "100%;";
         document.getElementById('tbl2').style.width = "100%;";
-    }, 10);
+    }, 10);*/
 
     function onLoad() {
         document.addEventListener("deviceready", ondvr, false);
@@ -73,6 +73,7 @@
     }
 
     function onbb() {
+		settblwidth();
         if ($.mobile.activePage.is('#home')) {
             navigator.app.exitApp();
         }
@@ -86,75 +87,47 @@
 
         if ($.mobile.activePage.is('#niro_pg')) {
             location.replace("#home");
-            document.getElementById('tbl1').style.width = "100%;";
-            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#vam_pg')) {
             location.replace("#home");
-            document.getElementById('tbl1').style.width = "100%;";
-            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#moshavere_pg')) {
             location.replace("#home");
-            document.getElementById('tbl1').style.width = "100%;";
-            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#sabeghe_bime_pg')) {
             location.replace("#home");
-            document.getElementById('tbl1').style.width = "100%;";
-            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#mysabeghe_bime_pg')) {
             location.replace("#home");
-            document.getElementById('tbl1').style.width = "100%;";
-            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#reqpg')) {
             location.replace("#home");
-            document.getElementById('tbl1').style.width = "100%;";
-            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#aboutpg')) {
             location.replace("#home");
-            document.getElementById('tbl1').style.width = "100%;";
-            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#fishbimepg')) {
             location.replace("#home");
-            document.getElementById('tbl1').style.width = "100%;";
-            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#singlenewpg')) {
             location.replace("#home");
-            document.getElementById('tbl1').style.width = "100%;";
-            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#newslistpg')) {
             location.replace("#home");
-            document.getElementById('tbl1').style.width = "100%;";
-            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#chrjpg')) {
             location.replace("#home");
-            document.getElementById('tbl1').style.width = "100%;";
-            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#sndmsgpg')) {
             location.replace("#home");
-            document.getElementById('tbl1').style.width = "100%;";
-            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#singlenews')) {
             location.replace("#home");
-            document.getElementById('tbl1').style.width = "100%;";
-            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#menuplc')) {
             location.replace("#home");
-            document.getElementById('tbl1').style.width = "100%;";
-            document.getElementById('tbl2').style.width = "100%;";
         }
-
+		settblwidth();
     }
 
     onLoad();
@@ -192,8 +165,8 @@
             <div class="splide" style="">
                 <div class="splide__track" style="">
                     <ul class="splide__list" style="">
-                        <li class="splide__slide" style="">
-                            <table style="width:99%; margin:2px; text-align:center ; direction: rtl;" id="tbl1">
+                        <li class="splide__slide">
+                            <table style="width:100%; text-align:center ; direction: rtl;" id="tbl1">
                                 <tr>
 
                                     <script src="palib/fishbime.js"></script>
@@ -256,8 +229,8 @@
                                 </tr>
                             </table>
                             <br><br><br></li>
-                        <li class="splide__slide" style="">
-                            <table style="width:99%; margin:2px; text-align:center ; direction: rtl;" id="tbl2">
+                        <li class="splide__slide">
+                            <table style="width:100%; text-align:center ; direction: rtl;" id="tbl2">
                                 <tr>
                                     <script src="palib/moshavere.js"></script>
                                     <td style="font-weight: bold; width: 33.33%;"><span onclick="load_moshavere_form()"><img
@@ -618,6 +591,13 @@
     if (localStorage.mob != undefined && localStorage.mob != "" && localStorage.token != undefined && localStorage.token != "") {
         location.replace("#home");
     }
+	
+	function settblwidth()
+	{
+		var thiswidth=(screen.width/100)*90;
+		document.getElementById('tbl1').style.width=thiswidth+"px";
+		document.getElementById('tbl2').style.width=thiswidth+"px";
+	}
 </script>
 <style>
     h3 {
