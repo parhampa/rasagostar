@@ -194,7 +194,7 @@ function make_span_btn() {
         '">'
         + spanbtn.title +
         '</span>';
-    document.getElementById(placeid).innerHTML = document.getElementById(placeid).innerHTML + resbtn;
+    document.getElementById(placeid).innerHTML = document.getElementById(placeid).innerHTML + resbtn+"<br>";
     spanbtn = {
         id: "",
         title: "",

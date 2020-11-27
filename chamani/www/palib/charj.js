@@ -17,6 +17,12 @@ function loadchrj() {
     input.classes = "chrj";
     makeinput();
 
+    spanbtn.title = "پرداخت اینترنتی حق الزحمه دفتر چمنی";
+    spanbtn.classes = "w3-btn w3-blue w3-round";
+    spanbtn.style = "width:100%; margin-bottom:10px; margin-top:10px;";
+    spanbtn.onclick = "window.open('https://733.ir/sg/sg/5b4f96');";
+    make_span_btn();
+
     label.title = "مبلغ به ریال:";
     label.classes = "w3-text-green";
     make_label();
@@ -43,8 +49,9 @@ function loadchrj() {
     textarea.classes = "chrj w3-input w3-border";
     make_textarea();
 
-    spanbtn.title = "ثبت";
-    spanbtn.classes = "w3-btn w3-green w3-round w3-margin";
+    spanbtn.title = "ثبت واریز حق الزحمه دفتر چمنی";
+    spanbtn.classes = "w3-btn w3-green w3-round";
+    spanbtn.style = "width:60%; margin-right:20%;";
     spanbtn.onclick = "addcharj()";
     make_span_btn();
 
@@ -54,11 +61,8 @@ function loadchrj() {
     make_span_btn();
     showmycharj()*/
 
-    spanbtn.title = "پرداخت اینترنتی";
-    spanbtn.classes = "w3-btn w3-blue w3-round w3-margin";
-    spanbtn.onclick = "window.open('https://733.ir/sg/sg/5b4f96');";
-    make_span_btn();
-    showmycharj()
+
+    showmycharj();
 
 
 }

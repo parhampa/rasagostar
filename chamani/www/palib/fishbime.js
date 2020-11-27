@@ -14,7 +14,6 @@ function showfishform() {
     input.classes = "fishfrm w3-input w3-border";
     input.style = "font-size:20px;";
     makeinput();
-
     input.name = "mob";
     input.id = "mob";
     input.type = "hidden";
@@ -24,26 +23,19 @@ function showfishform() {
 
     document.getElementById(placeid).innerHTML += "<div id='mymeli'></div>";
 
-    spanbtn.title = "مشاهده";
+    spanbtn.title = "مشاهده فیش بیمه";
     spanbtn.classes = "w3-btn w3-green w3-round";
-    spanbtn.style = "margin:4px";
+    spanbtn.style = "width:60%; margin-right:20%;";
     spanbtn.onclick = "showresfishbime()";
     document.getElementById('myfishbime').innerHTML = "";
     make_span_btn();
 
-    spanbtn.title = "نمایش با جزئیات";
-    spanbtn.classes = "w3-btn w3-yellow w3-round";
-    spanbtn.style = "margin:4px";
-    spanbtn.onclick = "shownewfish()";
-    document.getElementById('myfishbime').innerHTML = "";
-    make_span_btn();
-
-    spanbtn.title = "پرداخت فیش بیمه";
+    /*spanbtn.title = "پرداخت فیش بیمه";
     spanbtn.classes = "w3-btn w3-blue w3-round";
     spanbtn.style = "margin:4px";
     spanbtn.onclick = "window.open('https://sep.shaparak.ir/Purchase/tamin')";
     document.getElementById('myfishbime').innerHTML = "";
-    make_span_btn();
+    make_span_btn();*/
 
     location.replace("#fishbimepg");
     showresfishbime();
@@ -54,6 +46,7 @@ function shownewfish() {
 }
 
 var puburl = "";
+var lastid;
 
 function showresfishbime() {
     var d = new Date();
@@ -97,11 +90,12 @@ function showresfishbime() {
         var res = JSON.parse(data);
         document.getElementById('myfishbime_req').innerHTML = "";
         var reshtm = "";
+        lastid = res.req[0].id;
         for (var i = 0; i < res.req.length; i++) {
             reshtm += "تاریخ درخواست: " + res.req[i].tarikh + "<br>";
             reshtm += "<img src='" + res.req[i].file + "' style='display: none;' id='reqfish" + res.req[i].id + "'>";
             reshtm += "<span class='w3-btn w3-green w3-round' onclick='showthisfish(" + res.req[i].id + ")'>نمایش فیش</span>";
-            reshtm += " <span class='w3-btn w3-yellow w3-round' onclick='loadmormyfish(" + res.req[i].id + ")'>نمایش با جزئیات</span>";
+            reshtm += " <span class='w3-btn w3-yellow w3-round showmorpage' onclick='loadmormyfish(" + res.req[i].id + ")'>نمایش با جزئیات</span>";
             reshtm += " <span class='w3-btn w3-blue w3-round' onclick='deletemyfish(" + res.req[i].id + ")'>حذف تصویر</span>";
             reshtm += "<hr>";
         }
@@ -112,13 +106,14 @@ function showresfishbime() {
     if (document.getElementById('code_meli').value != "") {
         document.getElementById('myfishbime').innerHTML = "";
         document.getElementById('myfishbime').innerHTML += "<img src='" + url + "' width='100%'>";
-        document.getElementById('myfishbime').innerHTML += "<span class='w3-btn w3-green w3-round w3-margin' onclick='window.open(" + '"' + puburl + '"' + ")'>نمایش با جزئیات</span>";
+        document.getElementById('myfishbime').innerHTML += "<span class='w3-btn w3-green w3-round w3-margin' onclick='loadmormyfish(lastid);'>نمایش با جزئیات</span>";
+        document.getElementById('myfishbime').innerHTML += "<span class='w3-btn w3-blue w3-round' onclick=" + '"' + "window.open('https://sep.shaparak.ir/Purchase/tamin')" + '"> پرداخت فیش بیمه</span>';
     }
 }
 
 function loadmormyfish(id) {
-    var strid = "reqfish" + id;
-    window.open(document.getElementById(strid).src);
+    var link = "http://mob.0004320.ir/client/single_fish.php?id=" + id + "&mob=" + localStorage.getItem("mob");
+    window.open(link);
 }
 
 function showthisfish(id) {

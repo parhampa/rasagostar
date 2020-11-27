@@ -57,8 +57,15 @@
     }
 </script>
 <script type="text/javascript" charset="utf-8">
+
+    setInterval(function () {
+        document.getElementById('tbl1').style.width = "100%;";
+        document.getElementById('tbl2').style.width = "100%;";
+    }, 10);
+
     function onLoad() {
         document.addEventListener("deviceready", ondvr, false);
+
     }
 
     function ondvr() {
@@ -79,45 +86,73 @@
 
         if ($.mobile.activePage.is('#niro_pg')) {
             location.replace("#home");
+            document.getElementById('tbl1').style.width = "100%;";
+            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#vam_pg')) {
             location.replace("#home");
+            document.getElementById('tbl1').style.width = "100%;";
+            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#moshavere_pg')) {
             location.replace("#home");
+            document.getElementById('tbl1').style.width = "100%;";
+            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#sabeghe_bime_pg')) {
             location.replace("#home");
+            document.getElementById('tbl1').style.width = "100%;";
+            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#mysabeghe_bime_pg')) {
             location.replace("#home");
+            document.getElementById('tbl1').style.width = "100%;";
+            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#reqpg')) {
             location.replace("#home");
+            document.getElementById('tbl1').style.width = "100%;";
+            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#aboutpg')) {
             location.replace("#home");
+            document.getElementById('tbl1').style.width = "100%;";
+            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#fishbimepg')) {
             location.replace("#home");
+            document.getElementById('tbl1').style.width = "100%;";
+            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#singlenewpg')) {
             location.replace("#home");
+            document.getElementById('tbl1').style.width = "100%;";
+            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#newslistpg')) {
             location.replace("#home");
+            document.getElementById('tbl1').style.width = "100%;";
+            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#chrjpg')) {
             location.replace("#home");
+            document.getElementById('tbl1').style.width = "100%;";
+            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#sndmsgpg')) {
             location.replace("#home");
+            document.getElementById('tbl1').style.width = "100%;";
+            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#singlenews')) {
             location.replace("#home");
+            document.getElementById('tbl1').style.width = "100%;";
+            document.getElementById('tbl2').style.width = "100%;";
         }
         if ($.mobile.activePage.is('#menuplc')) {
             location.replace("#home");
+            document.getElementById('tbl1').style.width = "100%;";
+            document.getElementById('tbl2').style.width = "100%;";
         }
 
     }
@@ -128,13 +163,13 @@
 
 
 <div data-role="page" data-theme="a" id="aut1" class="">
-    <div data-role="content" data-theme="a">
+    <div data-role="content" data-theme="a" class="w3-container w3-padding">
         <div style="width:100%; margin-top: 200px;" id="autres"></div>
     </div>
 </div>
 
 <div data-role="page" data-theme="a" id="aut2" class="">
-    <div data-role="content" data-theme="a">
+    <div data-role="content" data-theme="a" class="w3-container w3-padding">
         <div style="width:100%; margin-top: 200px;" id="autres2"></div>
     </div>
 </div>
@@ -145,12 +180,12 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3>خدمات بیمه و مالیات چمنی</h3>
+        <p class="w3-margin" style="font-weight: bold; font-size: 14px; font-family: Tahoma">مرکز خدمات بیمه و مالیات چمنی</p>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
     </div>
-    <div data-role="content" data-theme="a" style="">
+    <div data-role="content" data-theme="a" class="w3-container w3-padding">
         <br><br>
 
         <div style="width:100%; direction:ltr;" id="mnpg">
@@ -158,7 +193,7 @@
                 <div class="splide__track" style="">
                     <ul class="splide__list" style="">
                         <li class="splide__slide" style="">
-                            <table style="width:99%; margin:2px; text-align:center ; direction: rtl;">
+                            <table style="width:99%; margin:2px; text-align:center ; direction: rtl;" id="tbl1">
                                 <tr>
 
                                     <script src="palib/fishbime.js"></script>
@@ -222,7 +257,7 @@
                             </table>
                             <br><br><br></li>
                         <li class="splide__slide" style="">
-                            <table style="width:99%; margin:2px; text-align:center ; direction: rtl;">
+                            <table style="width:99%; margin:2px; text-align:center ; direction: rtl;" id="tbl2">
                                 <tr>
                                     <script src="palib/moshavere.js"></script>
                                     <td style="font-weight: bold; width: 33.33%;"><span onclick="load_moshavere_form()"><img
@@ -297,19 +332,22 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3>خدمات بیمه و مالیات چمنی</h3>
+        <p class="w3-margin" style="font-weight: bold; font-size: 14px; font-family: Tahoma">مرکز خدمات بیمه و مالیات چمنی</p>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
     </div>
-    <div data-role="content" data-theme="a">
+    <div data-role="content" data-theme="a" class="w3-container w3-padding">
         <p style="direction: rtl;">دوست عزیز دقیقا نیرو کار داری چه ویژگی باشد؟ شرایط را بطور کامل بنویسید</p>
         <div style="width:100%;" id="niro_res"></div>
 
         <p class="W3-margin" style="font-family: Tahoma; font-weight: bold; font-size: 12px;">حق الزحمه خدمات دفتر
             300،000 ریال می باشد</p>
         <p class="w3-margin" style="font-family: Tahoma; font-weight: bold; font-size: 12px;">مبلغی که به شما اعلام شده
-            است ازدرگاه اینترنتی پرداخت نمائید(کارت به کارت:شماره کارت 0341-9428-9974-6037)
+            است ازدرگاه اینترنتی پرداخت نمائید
+            <br>
+            (کارت به کارت: 0341-9428-9974-6037)
+            <br>
             پس از پرداخت به شماره 09155614320 تماس گرفته و تائیدیه پرداخت را بگیرید. چمنی
         </p>
         <div style="width:100%;" id="my_niro_res"></div>
@@ -321,12 +359,12 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3>خدمات بیمه و مالیات چمنی</h3>
+        <p class="w3-margin" style="font-weight: bold; font-size: 14px; font-family: Tahoma">مرکز خدمات بیمه و مالیات چمنی</p>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
     </div>
-    <div data-role="content" data-theme="a">
+    <div data-role="content" data-theme="a" class="w3-container w3-padding">
         <div style="width:100%;" id="vam_res"></div>
         <div style="width:100%;" id="my_vam_res"></div>
     </div>
@@ -337,12 +375,12 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3>خدمات بیمه و مالیات چمنی</h3>
+        <p class="w3-margin" style="font-weight: bold; font-size: 14px; font-family: Tahoma">مرکز خدمات بیمه و مالیات چمنی</p>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
     </div>
-    <div data-role="content" data-theme="a">
+    <div data-role="content" data-theme="a" class="w3-container w3-padding">
         <div style="width:100%;" id="moshavere_res"></div>
         <div style="width:100%;" id="my_moshavere_res"></div>
     </div>
@@ -353,12 +391,12 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3>خدمات بیمه و مالیات چمنی</h3>
+        <p class="w3-margin" style="font-weight: bold; font-size: 14px; font-family: Tahoma">مرکز خدمات بیمه و مالیات چمنی</p>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
     </div>
-    <div data-role="content" data-theme="a">
+    <div data-role="content" data-theme="a" class="w3-container w3-padding">
         <div style="width:100%;" id="my_sabeghe_bime_res"></div>
     </div>
 </div>
@@ -367,15 +405,19 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3>خدمات بیمه و مالیات چمنی</h3>
+        <p class="w3-margin" style="font-weight: bold; font-size: 14px; font-family: Tahoma">مرکز خدمات بیمه و مالیات چمنی</p>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
     </div>
-    <div data-role="content" data-theme="a">
+    <div data-role="content" data-theme="a" class="w3-container w3-padding">
         <div style="width:100%;" id="sabeghe_bime_res"></div>
         <p class="w3-margin" style="font-weight: bold; font-family: Tahoma; font-size: 12px;">مبلغ فوق را از طریق درگاه
-            اینترنتی پرداخت نمائید ( کارت به کارت 0341 9428 9974 6037 ) پس از پرداخت به شماره 09155614320 تماس گرفته و
+            اینترنتی پرداخت نمائید
+            <br>
+            (کارت به کارت 0341-9428-9974-6037)
+            <br>
+            پس از پرداخت به شماره 09155614320 تماس گرفته و
             تائیدیه پرداخت را بگیرید سریعا ارسال خواهد شد چمنی</p>
     </div>
 </div>
@@ -385,12 +427,12 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3>خدمات بیمه و مالیات چمنی</h3>
+        <p class="w3-margin" style="font-weight: bold; font-size: 14px; font-family: Tahoma">مرکز خدمات بیمه و مالیات چمنی</p>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
     </div>
-    <div data-role="content" data-theme="a">
+    <div data-role="content" data-theme="a" class="w3-container w3-padding">
         <div style="width:100%;" id="reqinp"></div>
         <div style="width:100%;" id="sndreqplc"></div>
         <p>درخواستهای شما در زیر لیست خواهند شد:</p>
@@ -403,12 +445,12 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3>خدمات بیمه و مالیات چمنی</h3>
+        <p class="w3-margin" style="font-weight: bold; font-size: 14px; font-family: Tahoma">مرکز خدمات بیمه و مالیات چمنی</p>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
     </div>
-    <div data-role="content" data-theme="a">
+    <div data-role="content" data-theme="a" class="w3-container w3-padding">
         <div style="width:100%;">
             <h3>درباره ما</h3>
             <p>مرکز تخصصی خدمات بیمه تامین اجتماعی - مالیات - روابط کار و ادارات دیگر با بیش از 15 سال سابقه
@@ -431,13 +473,14 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3>خدمات بیمه و مالیات چمنی</h3>
+        <p class="w3-margin" style="font-weight: bold; font-size: 14px; font-family: Tahoma">مرکز خدمات بیمه و مالیات چمنی</p>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
     </div>
-    <div data-role="content" data-theme="a">
-        <p style="direction: rtl; font-size: 12px; font-family: Tahoma; font-weight: bold;" class="w3-margin">شناسه پرداخت + مبلغ پرداختی را با دقت یادداشت نمائید سپس پرداخت را بزنید</p>
+    <div data-role="content" data-theme="a" class="w3-container w3-padding">
+        <p style="direction: rtl; font-size: 12px; font-family: Tahoma; font-weight: bold;" class="w3-margin">شناسه
+            پرداخت + مبلغ پرداختی را با دقت یادداشت نمائید سپس پرداخت را بزنید</p>
         <div style="width:100%;" id="fishbimeplc"></div>
         <div style="width:100%; text-align: center;" id="myfishbime"></div>
         <h3>درخواست های گذشته شما</h3>
@@ -449,12 +492,12 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3>خدمات بیمه و مالیات چمنی</h3>
+        <p class="w3-margin" style="font-weight: bold; font-size: 14px; font-family: Tahoma">مرکز خدمات بیمه و مالیات چمنی</p>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
     </div>
-    <div data-role="content" data-theme="a">
+    <div data-role="content" data-theme="a" class="w3-container w3-padding">
         <div style="width:100%;" id="singlenewplc"></div>
     </div>
 </div>
@@ -463,12 +506,12 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3>خدمات بیمه و مالیات چمنی</h3>
+        <p class="w3-margin" style="font-weight: bold; font-size: 14px; font-family: Tahoma">مرکز خدمات بیمه و مالیات چمنی</p>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
     </div>
-    <div data-role="content" data-theme="a">
+    <div data-role="content" data-theme="a" class="w3-container w3-padding">
         <div style="width:100%;" id="newslistplc"></div>
     </div>
 </div>
@@ -478,16 +521,19 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3>خدمات بیمه و مالیات چمنی</h3>
+        <p class="w3-margin" style="font-weight: bold; font-size: 14px; font-family: Tahoma">مرکز خدمات بیمه و مالیات چمنی</p>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
     </div>
-    <div data-role="content" data-theme="a">
+    <div data-role="content" data-theme="a" class="w3-container w3-padding">
 
         <div style="width:100%;" id="charjplc"></div>
         <p class="w3-margin" style="font-size: 12px; font-weight: bold; font-family: Tahoma;">مبلغی که به شما اعلام شده
-            است ازدرگاه اینترنتی پرداخت نمائید(کارت به کارت:شماره کارت 0341-9428-9974-6037)
+            است ازدرگاه اینترنتی پرداخت نمائید
+            <br>
+            (کارت به کارت: 0341-9428-9974-6037)
+            <br>
             پس از پرداخت به شماره 09155614320 تماس گرفته و تائیدیه پرداخت را بگیرید. چمنی
         </p>
         <div style="width:100%;" id="mycharjplc"></div>
@@ -504,7 +550,7 @@
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
     </div>
-    <div data-role="content" data-theme="a">
+    <div data-role="content" data-theme="a" class="w3-container w3-padding">
         <script src="palib/sndmsg.js"></script>
         <div style="width:100%;" id="sndmsgplc"></div>
         <div style="width:100%;" id="mymsgplc"></div>
@@ -517,12 +563,12 @@
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3>خدمات بیمه و مالیات چمنی</h3>
+        <p class="w3-margin" style="font-weight: bold; font-size: 14px; font-family: Tahoma">مرکز خدمات بیمه و مالیات چمنی</p>
         <!--<span onclick="location.replace('#menuplc');" style="font-size:20px;"
               class="ui-btn-right ui-btn-corner-all ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation "
               data-form="ui-icon" data-role="button" role="button"> Navigation </span>-->
     </div>
-    <div data-role="content" data-theme="a">
+    <div data-role="content" data-theme="a" class="w3-container w3-padding">
         <div style="width:100%;" id="newcontent">
 
 
@@ -531,12 +577,12 @@
 </div>
 
 
-<div data-role="page" data-theme="a" id="menuplc">
+<!--<div data-role="page" data-theme="a" id="menuplc">
     <div data-role="header" data-position="fixed" style="background-color:#FFA500;" class="headers">
         <span onclick="gotohome();" style="font-size:20px;"
               class="ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext ui-shadow"
               title="Home" data-form="ui-icon" data-role="button" role="button"> Home </span>
-        <h3>خدمات بیمه و مالیات چمنی</h3>
+        <p class="w3-margin" style="font-weight: bold; font-size: 14px; font-family: Tahoma">مرکز خدمات بیمه و مالیات چمنی</p>
         <div style="width:100%; text-align:center;">
             <img src="flogo.png" style="width:30%;">
         </div>
@@ -558,7 +604,7 @@
             <hr>
         </div>
     </div>
-</div>
+</div>-->
 
 
 <div id="id01" class="w3-modal" style="text-align:center;">

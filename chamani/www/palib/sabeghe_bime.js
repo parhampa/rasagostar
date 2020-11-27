@@ -93,6 +93,11 @@ function load_sabeghe_bime_form() {
     input.classes = "w3-input w3-border sbfrm";
     makeinput();
 
+    spanbtn.title = "پرداخت حق الزحمه دفتر 50،000 ریال";
+    spanbtn.classes = "w3-btn w3-blue w3-round w3-margin";
+    spanbtn.onclick = "window.open('https://733.ir/sg/sg/5b4f96');";
+    make_span_btn();
+
     spanbtn.title = "ارسال";
     spanbtn.onclick = "post_sabeghe_bime()";
     spanbtn.classes = "w3-btn w3-green w3-round w3-margin";
@@ -115,6 +120,7 @@ function post_sabeghe_bime() {
 }
 
 function my_sabeghe_bime() {
+	onLoad();
     placeid = "my_sabeghe_bime_res";
     document.getElementById(placeid).innerHTML = "";
 
