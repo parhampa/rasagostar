@@ -93,7 +93,7 @@ function showresfishbime() {
         lastid = res.req[0].id;
         for (var i = 0; i < res.req.length; i++) {
             reshtm += "تاریخ درخواست: " + res.req[i].tarikh + "<br>";
-            reshtm += "<img src='" + res.req[i].file + "' style='display: none;' id='reqfish" + res.req[i].id + "'>";
+            reshtm += "<img src='" + res.req[i].file + "' style='display: none;' id='reqfish" + res.req[i].id + "' onclick='loadmormyfish(" + res.req[i].id + ")'>";
             reshtm += "<span class='w3-btn w3-green w3-round' onclick='showthisfish(" + res.req[i].id + ")'>نمایش فیش</span>";
             reshtm += " <span class='w3-btn w3-yellow w3-round showmorpage' onclick='loadmormyfish(" + res.req[i].id + ")'>نمایش با جزئیات</span>";
             reshtm += " <span class='w3-btn w3-blue w3-round' onclick='deletemyfish(" + res.req[i].id + ")'>حذف تصویر</span>";
@@ -105,7 +105,7 @@ function showresfishbime() {
 
     if (document.getElementById('code_meli').value != "") {
         document.getElementById('myfishbime').innerHTML = "";
-        document.getElementById('myfishbime').innerHTML += "<img src='" + url + "' width='100%'>";
+        document.getElementById('myfishbime').innerHTML += "<img src='" + url + "' width='100%' onclick='loadmormyfish(lastid);'>";
         document.getElementById('myfishbime').innerHTML += "<span class='w3-btn w3-green w3-round w3-margin' onclick='loadmormyfish(lastid);'>نمایش با جزئیات</span>";
         document.getElementById('myfishbime').innerHTML += "<span class='w3-btn w3-blue w3-round' onclick=" + '"' + "window.open('https://sep.shaparak.ir/Purchase/tamin')" + '"> پرداخت فیش بیمه</span>';
     }

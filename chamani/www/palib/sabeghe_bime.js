@@ -49,10 +49,12 @@ function load_sabeghe_bime_form() {
     make_label();
     input.name = "sh_meli";
     input.id = "sh_meli";
+    input.onkeypress = "load_my_meli2()";
+    input.onchange = "load_my_meli2()";
     input.type = "text";
-    input.classes = "w3-input w3-border sbfrm";
+    input.classes = "w3-input w3-border sbfrm shmeli2";
     makeinput();
-
+    document.getElementById(placeid).innerHTML += "<div id='mymeli2'></div>";
     label.title = "سال تولد";
     label.classes = "w3-text-green";
     make_label();
@@ -120,7 +122,7 @@ function post_sabeghe_bime() {
 }
 
 function my_sabeghe_bime() {
-	onLoad();
+    onLoad();
     placeid = "my_sabeghe_bime_res";
     document.getElementById(placeid).innerHTML = "";
 
@@ -159,4 +161,13 @@ function my_sabeghe_bime() {
         location.replace("#mysabeghe_bime_pg");
     }
     res_obj_postdata("mysabi");
+}
+
+function load_my_meli2() {
+    postobj.send_type = "post";
+    postobj.post_url = "http://mob.0004320.ir/client/my_meli2.php";
+    postobj.after_success = function (data) {
+        document.getElementById('mymeli2').innerHTML = data;
+    }
+    res_obj_postdata("shmeli2");
 }

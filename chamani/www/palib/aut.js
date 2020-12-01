@@ -18,7 +18,7 @@ function aut1() {
 
     spanbtn.title = "درخواست کد";
     spanbtn.classes = "w3-btn w3-round w3-green w3-margin";
-    spanbtn.style = "width:90%;"
+    spanbtn.style = "width:90%;";
     spanbtn.onclick = "sndautcode()";
     make_span_btn();
 
@@ -37,7 +37,7 @@ function sndautcode() {
             checkcode();
         }
         else {
-            alert("اشکال در انجام عملیات...")
+            alert("اشکال در انجام عملیات...");
         }
     }
     res_obj_postdata("autcls");
@@ -54,7 +54,7 @@ function checkcode() {
     input.name = "mob";
     input.id = "mobset";
     input.type = "hidden";
-    input.classes = "autcls2"
+    input.classes = "autcls2";
     input.values = tmpmob;
     makeinput();
 
@@ -67,7 +67,7 @@ function checkcode() {
 
     spanbtn.title = "ارسال کد";
     spanbtn.classes = "w3-btn w3-round w3-green w3-margin";
-    spanbtn.style = "width:90%;"
+    spanbtn.style = "width:90%;";
     spanbtn.onclick = "servercheckcode()";
     make_span_btn();
 
@@ -83,6 +83,7 @@ function servercheckcode() {
             localStorage.setItem("mob", document.getElementById("mobset").value);
             localStorage.setItem("token", document.getElementById("tokenset").value);
             location.replace("#home");
+            settblwidth();
         }
         else {
             alert("کد وارد شده صحیح نمی باشد.");
