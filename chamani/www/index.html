@@ -135,7 +135,8 @@
 <body style="direction:rtl;" onload="onLoad()">
 
 
-<div data-role="page" data-theme="a" id="loading" class="" style="background-image: url('load.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+<div data-role="page" data-theme="a" id="loading" class=""
+     style="background-image: url('load.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <div data-role="content" data-theme="a">
     </div>
 </div>
@@ -640,6 +641,10 @@
             }
         }
         res_obj_postdata("chkautfrm");
+    } else {
+        localStorage.removeItem("mob");
+        localStorage.removeItem("token");
+        location.replace("#aut1");
     }
 
     function settblwidth() {
