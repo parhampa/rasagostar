@@ -69,7 +69,7 @@ function load_niro_form() {
 
     spanbtn.title = "پرداخت اینترنتی";
     spanbtn.classes = "w3-btn w3-blue w3-round w3-margin";
-    spanbtn.onclick = "window.open('https://733.ir/sg/sg/5b4f96');";
+    spanbtn.onclick = "window.open('http://s.asanpardakht.net/lHHgZ');";
     make_span_btn();
 
     my_niro();

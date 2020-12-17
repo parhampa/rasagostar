@@ -51,7 +51,7 @@ var lastid;
 function showresfishbime() {
     var d = new Date();
     var n = d.getTime();
-    var url = "http://www.0004320.ir/rasa/get-fish.php?id=" + document.getElementById('code_meli').value + "&ver=" + n;
+    var url = "http://www.0004320.ir/get-fish.php?id=" + document.getElementById('code_meli').value + "&ver=" + n;
     puburl = url;
     placeid = "myfishbime";
     document.getElementById(placeid).innerHTML = "";

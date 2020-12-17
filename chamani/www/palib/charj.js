@@ -20,7 +20,7 @@ function loadchrj() {
     spanbtn.title = "پرداخت اینترنتی حق الزحمه دفتر چمنی";
     spanbtn.classes = "w3-btn w3-blue w3-round";
     spanbtn.style = "width:100%; margin-bottom:10px; margin-top:10px;";
-    spanbtn.onclick = "window.open('https://733.ir/sg/sg/5b4f96');";
+    spanbtn.onclick = "window.open('http://s.asanpardakht.net/lHHgZ');";
     make_span_btn();
 
     label.title = "مبلغ به ریال:";
