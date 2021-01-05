@@ -1,3 +1,5 @@
+var tyreq;
+
 function loadreq(req_type) {
     onLoad();
     placeid = "reqinp";
@@ -24,14 +26,14 @@ function loadreq(req_type) {
     input.classes = "reqfrm";
     makeinput();
 
+    tyreq = req_type;
+
     var reqtxt = "";
     if (req_type == 0) {
         reqtxt = "دوست عزیز تغییرات را دقیقا اعلام فرمائید ";
-    }
-    else if (req_type == 1) {
+    } else if (req_type == 1) {
         reqtxt = "متن درخواستی برای مالیات";
-    }
-    else if (req_type == 2) {
+    } else if (req_type == 2) {
         reqtxt = "متن درخواست سابقه کاری";
     }
     label.title = reqtxt;
@@ -70,6 +72,13 @@ function list_req() {
     input.id = "mob";
     input.type = "hidden";
     input.values = localStorage.getItem("mob");
+    input.classes = "reqres";
+    makeinput();
+
+    input.name = "req_type";
+    input.id = "req_type";
+    input.type = "hidden";
+    input.values = tyreq;
     input.classes = "reqres";
     makeinput();
 
